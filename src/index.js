@@ -3,13 +3,23 @@ import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 
 class TodoApp extends Component {
+  constructor(props) {
+  super(props)
+  this.state = {todos: []}
+  }
+  componentDidMount() {
+    this.setState({todos: [
+      {name: "デザインの勉強"},
+      {name: "美味しい日本酒を飲む"},
+      {name: "ワインについて勉強"}
+    ]})
+  }
   render () {
-    const todos = [
-      {name: 'hoge'},
-      {name: 'piyo'}
-    ]
     return (
-      <TodoList todos={todos} />
+      <div>
+        <h1>TodoApp</h1>
+        <TodoList todos={this.state.todos} />
+      </div>
     )
   }
 }
