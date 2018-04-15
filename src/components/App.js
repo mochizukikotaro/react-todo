@@ -8,9 +8,9 @@ export default class App extends Component {
   }
   componentDidMount() {
     this.setState({todos: [
-      {name: "デザインの勉強"},
-      {name: "美味しい日本酒を飲む"},
-      {name: "ワインについて勉強"}
+      {createdAt: '2018-04-04', name: "デザインの勉強"},
+      {createdAt: '2018-04-04', name: "美味しい日本酒を飲む"},
+      {createdAt: '2018-04-04', name: "ワインについて勉強"}
     ]})
   }
   render () {
